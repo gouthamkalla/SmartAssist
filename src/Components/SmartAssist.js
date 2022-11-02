@@ -1,10 +1,12 @@
 import { Navigate, Route,Routes } from "react-router-dom";
+import Home from "../HomePage/Home";
 import Login from "../Login/Login";
 const SmartAssist = () => {
   return (
     <Routes>
-        <Route path="/" element={<Navigate to="/login"/>}></Route>
-      <Route path="/login" element={<Login />} />
+        <Route exact path="/" element={<Navigate to="/home"/>}></Route>
+        <Route exact path="/home" element={<Home />}></Route>
+      <Route exact path="/login" element={<Login />} />
     </Routes>
   );
 };
