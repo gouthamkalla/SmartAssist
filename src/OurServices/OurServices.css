@@ -1,0 +1,21 @@
+.allServices {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  flex-wrap: wrap;
+  padding: 1.5%;
+}
+.serviceContainer {
+  background-color: #eeeeee;
+  border-radius: 8px;
+  height: 30%;
+  width: 30%;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+.serviceInfo {
+  padding: 3%;
+}
+.info {
+  line-height: 2rem;
+}

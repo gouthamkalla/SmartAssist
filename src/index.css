@@ -5,13 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(184, 220, 246);
-  background-image: url("smart-assist-banner.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  
   height: 100%;
-  backdrop-filter: blur(1.5px);
 }
 body,html{
   height: 100%;

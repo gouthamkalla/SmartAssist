@@ -1,14 +1,16 @@
 import Card from "../UI/Card";
 import "./Login.css";
+
 const Login = () => {
   const submitHandler = (event) => {
     event.preventDefault();
   };
+
   return (
     <Card>
       <div className="text-center login">
         <img
-          className="crm_logo"
+          className="smart_assist_logo"
           src={require("../Images/smart-assist-circle.jpg")}
           alt={"Logo"}
           style={{ width: 150, height: 150, alignContent: "center" }}
