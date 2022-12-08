@@ -6,6 +6,7 @@ import FeedBack from "../FeedBack/FeedBack";
 import Home from "../HomePage/Home";
 import Login from "../Login/Login";
 import OurServices from "../OurServices/OurServices";
+import DashBoard from "../DashBoard/DashBoard";
 const SmartAssist = () => {
   return (
     <Routes>
@@ -17,6 +18,7 @@ const SmartAssist = () => {
       <Route exact path="/reviews" element={<Reviews />} />
       <Route exact path="/contact" element={<ContactUs />} />
       <Route exact path="/feedback" element={<FeedBack />} />
+      <Route exact path="/dashboard" element={<DashBoard/>}/>
     </Routes>
   );
 };

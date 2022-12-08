@@ -1,4 +1,4 @@
-const TS_CITIES = [
+const TELENGANA = [
   "Hyderabad",
   "Secundrabad",
   "Warangal",
@@ -14,7 +14,7 @@ const TS_CITIES = [
   "Mancherial",
   "Bhongir",
 ];
-const TN_CITIES = [
+const TAMILNADU = [
   "Chennai",
   "Dindigul",
   "Madurai",
@@ -30,7 +30,7 @@ const TN_CITIES = [
   "Nagercoil",
   "Ambur",
 ];
-const KA_CITIES = [
+const KARNATAKA = [
   "Banglore",
   "Bedar",
   "Bhalki",
@@ -48,7 +48,7 @@ const KA_CITIES = [
   "Haweri",
   "Madikeri",
 ];
-const MH_CITIES = [
+const MAHARASTRA = [
   "Mumbai",
   "Pune",
   "Nashik",
@@ -66,7 +66,7 @@ const MH_CITIES = [
   "Biwandi",
   "Ratnagiri",
 ];
-const AP_CITIES = [
+const ANDHRAPRADESH= [
   "Vijayawada",
   "Vishakapatnam",
   "Nellore",
@@ -84,6 +84,7 @@ const AP_CITIES = [
   "W.Godavari",
   "Srikakulam",
 ];
+const STATES=["TELENGANA","KARNATAKA","MAHARASTRA","TAMILNADU","ANDHRAPRADESH"]
 const REVIEW_DATA = [
   {
     Username: "Ramesh",
@@ -123,4 +124,4 @@ const REVIEW_DATA = [
   },
 ];
 
-export { TS_CITIES, TN_CITIES, KA_CITIES, MH_CITIES, AP_CITIES, REVIEW_DATA };
+export { TELENGANA, TAMILNADU, KARNATAKA, MAHARASTRA, ANDHRAPRADESH, REVIEW_DATA ,STATES};

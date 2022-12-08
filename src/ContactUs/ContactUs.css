@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;
+  height: 100vh;
+}
+.heading {
+  padding-left: 14%;
+  padding-top: 15%;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  width: 50%;
+  background-color:#212529;
+}
+.form {
+  padding-left: 12%;
+}

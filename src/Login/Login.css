@@ -1,3 +1,6 @@
-.login{
-    padding-top: 8%;
+.LoginWrappper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex:1
 }

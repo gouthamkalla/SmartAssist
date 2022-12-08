@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { TS_CITIES, TN_CITIES, MH_CITIES, AP_CITIES } from "../Data/Data";
+import { TELENGANA,MAHARASTRA,TAMILNADU,ANDHRAPRADESH } from "../Data/Data";
 import Footer from "./Footer";
 
 const Header = styled.h4`
@@ -29,28 +29,28 @@ const CallBack = () => {
       <Header>We are serving in</Header>
       <State>Telangana</State>
       <RowContainer>
-        {TS_CITIES.map((data) => {
+        {TELENGANA.map((data) => {
           return <City>{data}</City>;
         })}
       </RowContainer>
       <hr style={{ color: "#ffffff" }}></hr>
       <State>Andhra Pradesh</State>
       <RowContainer>
-        {AP_CITIES.map((data) => {
+        {ANDHRAPRADESH.map((data) => {
           return <City>{data}</City>;
         })}
       </RowContainer>
       <hr style={{ color: "#ffffff" }}></hr>
       <State>TamilNadu</State>
       <RowContainer>
-        {TN_CITIES.map((data) => {
+        {TAMILNADU.map((data) => {
           return <City>{data}</City>;
         })}
       </RowContainer>
       <hr style={{ color: "#ffffff" }}></hr>
       <State>Maharastra</State>
       <RowContainer>
-        {MH_CITIES.map((data) => {
+        {MAHARASTRA.map((data) => {
           return <City>{data}</City>;
         })}
       </RowContainer>
