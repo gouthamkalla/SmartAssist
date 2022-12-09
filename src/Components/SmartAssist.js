@@ -7,6 +7,10 @@ import Home from "../HomePage/Home";
 import Login from "../Login/Login";
 import OurServices from "../OurServices/OurServices";
 import DashBoard from "../DashBoard/DashBoard";
+import MyCart from "../MyCart/MyCart";
+import MyBookings from "../MyBookings/MyBookings";
+import RateBooking from "../MyBookings/RateBooking";
+import NewProfessional from "../NewProfessional/NewProfessional";
 const SmartAssist = () => {
   return (
     <Routes>
@@ -19,6 +23,10 @@ const SmartAssist = () => {
       <Route exact path="/contact" element={<ContactUs />} />
       <Route exact path="/feedback" element={<FeedBack />} />
       <Route exact path="/dashboard" element={<DashBoard/>}/>
+      <Route exact path="/mycart" element={<MyCart/>}/>
+      <Route exact path="/mybookings" element={<MyBookings/>}/>
+      <Route exact path="/ratethebookings" element={<RateBooking/>}/>
+      <Route exact path="/newprofessionalsignupform" element={<NewProfessional/>}/>
     </Routes>
   );
 };

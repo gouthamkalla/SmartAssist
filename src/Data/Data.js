@@ -66,7 +66,7 @@ const MAHARASTRA = [
   "Biwandi",
   "Ratnagiri",
 ];
-const ANDHRAPRADESH= [
+const ANDHRAPRADESH = [
   "Vijayawada",
   "Vishakapatnam",
   "Nellore",
@@ -84,7 +84,28 @@ const ANDHRAPRADESH= [
   "W.Godavari",
   "Srikakulam",
 ];
-const STATES=["TELENGANA","KARNATAKA","MAHARASTRA","TAMILNADU","ANDHRAPRADESH"]
+const STATES = [
+  "TELENGANA",
+  "KARNATAKA",
+  "MAHARASTRA",
+  "TAMILNADU",
+  "ANDHRAPRADESH",
+];
+const PROFESSIONS = [
+  "A/C Repair",
+  "Electrician",
+  "Barber",
+  "Pest Control Worker",
+  "Plumber",
+  "Cleaning",
+  "Laundry Man",
+  "Electrical Appliance Technician",
+  "Gardener",
+  "Painter",
+  "Interior Designer",
+  "Delivery Captain",
+  "Kitchen Manager",
+];
 const REVIEW_DATA = [
   {
     Username: "Ramesh",
@@ -123,5 +144,16 @@ const REVIEW_DATA = [
       "Very Nice Service very good and fast response from the Technicians",
   },
 ];
+const GENDERS = ["Male", "Female", "Others"];
 
-export { TELENGANA, TAMILNADU, KARNATAKA, MAHARASTRA, ANDHRAPRADESH, REVIEW_DATA ,STATES};
+export {
+  TELENGANA,
+  TAMILNADU,
+  KARNATAKA,
+  MAHARASTRA,
+  ANDHRAPRADESH,
+  REVIEW_DATA,
+  STATES,
+  PROFESSIONS,
+  GENDERS,
+};

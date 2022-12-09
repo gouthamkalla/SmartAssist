@@ -18,7 +18,6 @@ const StateOptions = STATES.map((state) => {
 });
 var districtOptions = [];
 const DashBoard = () => {
-  
   const [selectedState, setSelectedState] = useState(null);
   const [selectedDistrict, setSelectedDistrict] = useState(null);
   const ChangeHandler = (event) => {
@@ -56,7 +55,7 @@ const DashBoard = () => {
       default:
         districtOptions = [];
     }
-    setSelectedState(event.value)
+    setSelectedState(event.value);
   };
   const navigate = useNavigate();
   const LogOutHandler = () => {
@@ -74,11 +73,11 @@ const DashBoard = () => {
           style={{ width: 50, height: 50, align: "center", paddingLeft: "1px" }}
         ></img>
         <NavLink
-          to="/mybookings"
+          to="/mycart"
           style={{ color: "white", textDecoration: "none" }}
           className="nav-item"
         >
-          My Bookings
+          My Cart
         </NavLink>
         <NavLink
           to="/ratethebookings"
@@ -88,11 +87,11 @@ const DashBoard = () => {
           Rate the Bookings
         </NavLink>
         <NavLink
-          to="/mycart"
+          to="/mybookings"
           style={{ color: "white", textDecoration: "none" }}
           className="nav-item"
         >
-          My Cart
+          My Bookings
         </NavLink>
         <NavLink
           to="/newprofessionalsignupform"
@@ -117,7 +116,7 @@ const DashBoard = () => {
         style={{ height: "60vh", width: "100%" }}
       ></img>
       <br></br>
-      <div style={{ display: "flex" ,paddingBottom:"2%"}}>
+      <div style={{ display: "flex", paddingBottom: "2%" }}>
         <div style={{ width: "30%", paddingLeft: "5%", paddingTop: "3%" }}>
           <Select
             defaultValue={selectedState}
@@ -133,7 +132,7 @@ const DashBoard = () => {
           />
         </div>
       </div>
-      <AllServices/>
+      <AllServices />
       <CallBack />
     </Card>
   );
