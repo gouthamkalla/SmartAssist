@@ -1,5 +1,6 @@
 import Select from "react-select";
 import Card from "../UI/Card";
+import { useNavigate } from "react-router-dom";
 import {
   PROFESSIONS,
   GENDERS,
@@ -31,6 +32,7 @@ const NewProfessional = () => {
   const [selectedGender, setSelectedGender] = useState(null);
   const [selectedState, setSelectedState] = useState(null);
   const [selectedDistrict, setSelectedDistrict] = useState(null);
+  const navigate = useNavigate();
 
   const ChangeHandler = (event) => {
     switch (event.value) {
@@ -69,100 +71,128 @@ const NewProfessional = () => {
     }
     setSelectedState(event.value);
   };
-  const newProfessionalSubmitHandler=(event)=>{
+  const newProfessionalSubmitHandler = (event) => {
     event.preventDefault();
-  }
+    navigate("/dashboard");
+    alert(
+      "Your Registration form is submitted succesfully we will review your application and Get Back to you soon..."
+    );
+  };
 
   return (
     <Card>
-      <div style={{ display: "flex", flexDirection: "row" }}>
-        <div style={{ width: "50vw" }}>
+      <div style={{ display: "flex", flexDirection: "row", height: "100vh" }}>
+        <div
+          style={{
+            color: "white",
+            backgroundColor: "#212529",
+            width: "50vw",
+            paddingTop: "20%",
+            paddingLeft: "8%",
+          }}
+        >
           <h1>Join our Network</h1>
+          <h6 style={{ width: "25vw" }}>
+            Get registered with us as a professional and get paid timely and get
+            unlimited benfits and serve the people all over the network.
+          </h6>
         </div>
-        <div>
+        <div style={{ paddingLeft: "3%", paddingTop: "2%" }}>
           <form>
-            <table>
-              <tr>
-                <td>
-                  <label>First Name:</label>
-                </td>
-                <td>
-                  <input type="text" required></input>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label>LastName:</label>
-                </td>
-                <td>
-                  <input type="text" required></input>
-                </td>
-              </tr>
-              <tr>
-                <td>Gender:</td>
-                <td>
-                  <Select
-                    options={genderOptions}
-                    defaultValue={selectedGender}
-                    onChange={setSelectedGender}
-                  ></Select>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <label>Type of Profession:</label>
-                </td>
-                <td>
-                  <Select
-                    options={professionOptions}
-                    defaultValue={selectedProfession}
-                    onChange={setSelectedProfession}
-                  ></Select>
-                </td>
-              </tr>
-              <tr>
-                <td>Location Preference:</td>
-                <td>(select state and country)*</td>
-              </tr>
-              <tr>
-                <td>
-                  <div>
+            <table cellPadding="15%">
+              <tbody>
+                <tr>
+                  <td>
+                    <label>First Name:</label>
+                  </td>
+                  <td>
+                    <input type="text" required></input>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>LastName:</label>
+                  </td>
+                  <td>
+                    <input type="text" required></input>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Gender:</td>
+                  <td>
                     <Select
-                      defaultValue={selectedState}
-                      onChange={ChangeHandler}
-                      options={StateOptions}
-                    />
-                  </div>
-                </td>
-                <td>
-                  <div>
+                      options={genderOptions}
+                      defaultValue={selectedGender}
+                      onChange={setSelectedGender}
+                    ></Select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>Type of Profession:</label>
+                  </td>
+                  <td>
                     <Select
-                      defaultValue={selectedDistrict}
-                      onChange={setSelectedDistrict}
-                      options={districtOptions}
-                    />
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>Current Address:</td>
-                <td>
-                    <textarea  required></textarea>
-                </td>
-              </tr>
-              <tr>
-                <td>Phone Number:</td>
-                <td><input type="tel" required></input></td>
-              </tr>
-              <tr>
-                <td>Email Address:</td>
-                <td><input type="email" required></input></td>
-              </tr>
-              <tr>
-                <td>
-                    <button type="submit" className="btn btn-primary" onSubmit={newProfessionalSubmitHandler}>Submit Registration Form</button>
-                </td>
-              </tr>
+                      options={professionOptions}
+                      defaultValue={selectedProfession}
+                      onChange={setSelectedProfession}
+                    ></Select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Location Preference:</td>
+                  <td>(select state and country)*</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>
+                      <Select
+                        defaultValue={selectedState}
+                        onChange={ChangeHandler}
+                        options={StateOptions}
+                      />
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <Select
+                        defaultValue={selectedDistrict}
+                        onChange={setSelectedDistrict}
+                        options={districtOptions}
+                      />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Current Address:</td>
+                  <td>
+                    <textarea required></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Phone Number:</td>
+                  <td>
+                    <input type="tel" required></input>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Email Address:</td>
+                  <td>
+                    <input type="email" required></input>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button
+                      type="submit"
+                      className="btn btn-primary"
+                      onClick={newProfessionalSubmitHandler}
+                    >
+                      Submit Registration Form
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </form>
         </div>

@@ -1,24 +1,99 @@
 import { Link } from "react-router-dom";
+import {
+  PAINTING,
+  ACSERVICE,
+  INTERIOR,
+  ELECTRICAL,
+  PLUMBING,
+  DELIVERY,
+  WASHING,
+  GARDENING,
+  APPLIANCE,
+  LAUNDRY,
+  KITCHEN,
+  WATERTANK,
+  PESTCONTROL,
+  HOMESALON,
+} from "../Data/Data";
 import styled from "styled-components";
 const Item = styled.div`
   border-radius: 8%;
   padding: 1%;
   background-color: #e8e8e8;
-  margin:1%;
+  margin: 1%;
 `;
+export let CART = [];
 
 const AllServices = () => {
+  const acAddHandler = () => {
+    CART = [...CART,ACSERVICE];
+    console.log(CART);
+  };
+  const electricalAddHandler = () => {
+    CART = [...CART,ELECTRICAL];
+    console.log(CART);
+  };
+  const homeSalonHandler = () => {
+    CART = [...CART,HOMESALON];
+    console.log(CART);
+  };
+  const pestControlAddHandler = () => {
+    CART = [...CART,PESTCONTROL];
+    console.log(CART);
+  };
+  const plumberAddHandler = () => {
+    CART = [...CART,PLUMBING];
+    console.log(CART);
+  };
+  const kitchenCleaningAddHandler = () => {
+    CART = [...CART,KITCHEN];
+    console.log(CART);
+  };
+  const waterTankAddHandler = () => {
+    CART = [...CART,WATERTANK];
+    console.log(CART);
+  };
+  const laundryAddHandler = () => {
+    CART = [...CART,LAUNDRY];
+    console.log(CART);
+  };
+  const applianceMaintenanceAddHandler = () => {
+    CART = [...CART,APPLIANCE];
+    console.log(CART);
+  };
+  const gardeningAddHandler = () => {
+    CART = [...CART,GARDENING];
+    console.log(CART);
+  };
+  const paintingAddHandler = () => {
+    CART = [...CART,PAINTING];
+    console.log(CART);
+  };
+  const washingAddHandler = () => {
+    CART = [...CART,WASHING];
+    console.log(CART);
+  };
+  const deliveryHandler = () => {
+    CART = [...CART,DELIVERY];
+    console.log(CART);
+  };
+  const designingHandler = () => {
+    CART = [...CART,INTERIOR];
+    console.log(CART);
+  };
+
   return (
-    <div style={{ display: "flex",flexWrap:"wrap", padding: "1%" }}>
+    <div style={{ display: "flex", flexWrap: "wrap", padding: "1%" }}>
       <Item>
-        <Link to={"/ac-repair"}>
-          <img
-            className="ac-repair"
-            src={require("../Images/ac.png")}
-            alt={"A/C"}
-          />
-        </Link>
+        <img
+          className="ac-repair"
+          src={require("../Images/ac.png")}
+          alt={"A/C"}
+        />
         <h6>A/C Repair</h6>
+        <button className="btn btn-primary" onClick={acAddHandler}>
+          Add
+        </button>
       </Item>
       <Item>
         <Link to={"/electricial-services"}>
@@ -29,6 +104,9 @@ const AllServices = () => {
           />
         </Link>
         <h6>Electrical Works</h6>
+        <button className="btn btn-primary" onClick={electricalAddHandler}>
+          Add
+        </button>
       </Item>
       <Item>
         <Link to={"/home-salon-services"}>
@@ -39,6 +117,9 @@ const AllServices = () => {
           />
         </Link>
         <h6>Home salon Services</h6>
+        <button className="btn btn-primary" onClick={homeSalonHandler}>
+          Add
+        </button>
       </Item>
       <Item>
         <Link to={"/pest-control"}>
@@ -49,6 +130,9 @@ const AllServices = () => {
           />
         </Link>
         <h6>Pest Control Services</h6>
+        <button className="btn btn-primary" onClick={pestControlAddHandler}>
+          Add
+        </button>
       </Item>
       <Item>
         <Link to={"/plumbing-services"}>
@@ -59,6 +143,9 @@ const AllServices = () => {
           />
         </Link>
         <h6>Plumbers</h6>
+        <button className="btn btn-primary" onClick={plumberAddHandler}>
+          Add
+        </button>
       </Item>
       <Item>
         <Link to={"/kitchen-cleaning"}>
@@ -69,6 +156,9 @@ const AllServices = () => {
           />
         </Link>
         <h6>Kitchen Cleaning Services</h6>
+        <button className="btn btn-primary" onClick={kitchenCleaningAddHandler}>
+          Add
+        </button>
       </Item>
       <Item>
         <Link to={"/water-tank-cleaning"}>
@@ -79,6 +169,9 @@ const AllServices = () => {
           />
         </Link>
         <h6>Water Tank Cleaning</h6>
+        <button className="btn btn-primary" onClick={waterTankAddHandler}>
+          Add
+        </button>
       </Item>
       <Item>
         <Link to={"/laundry"}>
@@ -89,6 +182,9 @@ const AllServices = () => {
           />
         </Link>
         <h6>Laundry Services</h6>
+        <button className="btn btn-primary" onClick={laundryAddHandler}>
+          Add
+        </button>
       </Item>
       <Item>
         <Link to={"/appliance-washing"}>
@@ -99,6 +195,12 @@ const AllServices = () => {
           />
         </Link>
         <h6>Appliances Maintenance</h6>
+        <button
+          className="btn btn-primary"
+          onClick={applianceMaintenanceAddHandler}
+        >
+          Add
+        </button>
       </Item>
       <Item>
         <Link to={"/gardening-services"}>
@@ -109,6 +211,9 @@ const AllServices = () => {
           />
         </Link>
         <h6>Gardening</h6>
+        <button className="btn btn-primary" onClick={gardeningAddHandler}>
+          Add
+        </button>
       </Item>
       <Item>
         <Link to={"/painting-servies"}>
@@ -119,6 +224,9 @@ const AllServices = () => {
           />
         </Link>
         <h6>Painting Services</h6>
+        <button className="btn btn-primary" onClick={paintingAddHandler}>
+          Add
+        </button>
       </Item>
       <Item>
         <Link to={"/washing-utensils"}>
@@ -129,6 +237,9 @@ const AllServices = () => {
           />
         </Link>
         <h6>Washing Utensils</h6>
+        <button className="btn btn-primary" onClick={washingAddHandler}>
+          Add
+        </button>
       </Item>
       <Item>
         <Link to={"/delivery-of-packages"}>
@@ -139,6 +250,9 @@ const AllServices = () => {
           />
         </Link>
         <h6>Delivery of Packages</h6>
+        <button className="btn btn-primary" onClick={deliveryHandler}>
+          Add
+        </button>
       </Item>
       <Item>
         <Link to={"/interior-design"}>
@@ -149,8 +263,12 @@ const AllServices = () => {
           />
         </Link>
         <h6>Interior Designing</h6>
+        <button className="btn btn-primary" onClick={designingHandler}>
+          Add
+        </button>
       </Item>
     </div>
   );
 };
 export default AllServices;
+

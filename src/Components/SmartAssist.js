@@ -11,6 +11,7 @@ import MyCart from "../MyCart/MyCart";
 import MyBookings from "../MyBookings/MyBookings";
 import RateBooking from "../MyBookings/RateBooking";
 import NewProfessional from "../NewProfessional/NewProfessional";
+import BookingForm from "../MyBookings/BookingForm";
 const SmartAssist = () => {
   return (
     <Routes>
@@ -27,6 +28,7 @@ const SmartAssist = () => {
       <Route exact path="/mybookings" element={<MyBookings/>}/>
       <Route exact path="/ratethebookings" element={<RateBooking/>}/>
       <Route exact path="/newprofessionalsignupform" element={<NewProfessional/>}/>
+      <Route exact path="/form" element={<BookingForm/>}/>
     </Routes>
   );
 };

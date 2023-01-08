@@ -1,7 +1,11 @@
-
+import { useNavigate } from "react-router-dom";
 const Form=()=>{
+    const navigate=useNavigate();
     const contactSubmitHandler=(event)=>{
         event.preventDefault();
+        alert("we noted all the details and we will get back to you soon...")
+        navigate("/home")
+
     }
     return(
         <div>
